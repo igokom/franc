@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:collection';
 
 import 'expressions.dart';
@@ -39,7 +38,7 @@ class Franc {
   }
 
   /// Get a list of probable languages the given value is written in.
-  Future<Map<String, double>> detectLanguages(String text) async {
+  Map<String, double> detectLanguages(String text) {
     if (text.isEmpty || text.length < minLength) {
       return {"und": 1.0}; //und()
     }
@@ -49,7 +48,7 @@ class Franc {
     }
 
     //Get the script which characters occur the most in `value`.
-    final List<Object?> scriptCount = await _getTopScript(text, regExpByScript);
+    final List<Object?> scriptCount = _getTopScript(text, regExpByScript);
 
     // One languages exists for the most-used script.
     final script = scriptCount[0] as String?;

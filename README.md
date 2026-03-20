@@ -10,7 +10,7 @@ Natural language detection tool.
 The algorithm is based on the trigram language models, which is a particular case of n-grams. To understand the idea, please check the original whitepaper Cavnar and Trenkle ['94: N-Gram-Based Text Categorization'](https://www.researchgate.net/publication/2375544_N-Gram-Based_Text_Categorization).
 
 ## Requirements
-Dart 2.0.0 or higher.
+Dart 2.19.0 or higher.
 
 ## Usage
 #### import

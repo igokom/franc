@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   final franc = Franc();
-  test('correctly detects language', () async {
+  test('correctly detects language', () {
     final String textInRussian1 = "Я пришёл к тебе с приветом,"
         "Рассказать, что солнце встало,"
         "Что оно горячим светом"
@@ -20,17 +20,17 @@ void main() {
         "На меня весельем веет,"
         "Что не знаю сам, что буду"
         "Петь — но только песня зреет.";
-    final result1 = await franc.detectLanguages(textInRussian1);
+    final result1 = franc.detectLanguages(textInRussian1);
     expect(result1["rus"], 1.0);
     print(result1);
 
     final String textInRussian2 = "Кот стоит на задних лапах";
-    final result2 = await franc.detectLanguages(textInRussian2);
+    final result2 = franc.detectLanguages(textInRussian2);
     expect(result2["mkd"], 1.0);
     print(result2);
 
     final String textInRussian3 = "Слава слава слава";
-    final result3 = await franc.detectLanguages(textInRussian3);
+    final result3 = franc.detectLanguages(textInRussian3);
     expect(result3["bos"], 1.0);
     print(result3);
   });
