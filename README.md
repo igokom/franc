@@ -1,4 +1,4 @@
-# __franc__
+# __dfranc__
 Natural language detection tool.
 
 ## Features
@@ -15,7 +15,7 @@ Dart 2.0.0 or higher.
 ## Usage
 #### import
 ```
-import 'package:franc/franc.dart';
+import 'package:dfranc/franc.dart';
 ```
 #### make object
 ```

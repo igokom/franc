@@ -1,4 +1,4 @@
-import 'package:franc/franc.dart';
+import 'package:dfranc/dfranc.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -19,15 +19,19 @@ void main() {
         "Рассказать, что отовсюду"
         "На меня весельем веет,"
         "Что не знаю сам, что буду"
-        "Петь — но только песня зреет. ";
-    final String textInRussian2 = "Кот стоит на задних лапах";
-    final String textInRussian3 = "Слава слава слава";
+        "Петь — но только песня зреет.";
     final result1 = await franc.detectLanguages(textInRussian1);
-    final result2 = await franc.detectLanguages(textInRussian2);
-    final result3 = await franc.detectLanguages(textInRussian3);
-    print(result1);
     expect(result1["rus"], 1.0);
+    print(result1);
+
+    final String textInRussian2 = "Кот стоит на задних лапах";
+    final result2 = await franc.detectLanguages(textInRussian2);
     expect(result2["mkd"], 1.0);
+    print(result2);
+
+    final String textInRussian3 = "Слава слава слава";
+    final result3 = await franc.detectLanguages(textInRussian3);
     expect(result3["bos"], 1.0);
+    print(result3);
   });
 }

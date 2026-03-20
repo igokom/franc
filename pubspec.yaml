@@ -1,11 +1,10 @@
-name: franc
+name: dfranc
 description: Dart port of franc
-version: 0.0.1
-author: Igor Komorkin
+version: 1.0.0
 homepage: https://github.com/IgoKom/franc
 
 environment:
-  sdk: "^2.0.0"
+  sdk: ">=2.19.0 <3.0.0"
 
 dev_dependencies:
-  test: ^1.15.7
+  test: ^1.16.0

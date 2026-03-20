@@ -26,7 +26,7 @@ List<String> getCleanTrigrams(String text) {
 List<String> _makeTrigrams(String value) {
   final trigrams = <String>[];
   int index;
-  if (value == null || value.isEmpty) return trigrams;
+  if (value.isEmpty) return trigrams;
   index = value.length - 3 + 1;
   if (index < 1) return trigrams;
   while (index-- > 0) {
@@ -38,7 +38,7 @@ List<String> _makeTrigrams(String value) {
 // Removed general non-important (as in, for language detection) punctuation
 // marks, symbols, and numbers.
 String _clean(String value) {
-  if (value == null || value.isEmpty) {
+  if (value.isEmpty) {
     return '';
   }
   return value
